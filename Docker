@@ -1,0 +1,181 @@
+1-docker --version
+2- sudo docker run hello-world
+3- docker run -d redis
+9ab02f3099adeaac7943ef2b88bd0426b13f4361557e61f4d3d4a1588f2f14e7
+4- docker stop 9ab02f3099ad
+9ab02f3099ad
+4- docker ps -a
+5- docker ps -a
+9ab02f3099ad
+6- docker run -d nginx:alpine
+c3b9ed22dfddaf21cc1100d9ac626acea3a567c6c361f8f119543a48883b3703
+7- docker image rm 3e12e2ceb68f -f
+Untagged: redis:latest
+Untagged: redis@sha256:dfeb5451fce377ab47c5bb6b6826592eea534279354bbfc3890c0b5e9b57c763
+Deleted: sha256:3e12e2ceb68fcf0de4ebfe5678b2dcc34642c0f994b1f6d82154ca498aebc2e6
+8- docker pull nginx:1.14-alpine
+1.14-alpine: Pulling from library/nginx
+bdf0201b3a05: Pull complete 
+3d0a573c81ed: Pull complete 
+8129faeb2eb6: Pull complete 
+3dc99f571daf: Pull complete 
+Digest: sha256:485b610fefec7ff6c463ced9623314a04ed67e3945b9c08d7e53a47f6d108dc7
+Status: Downloaded newer image for nginx:1.14-alpine
+docker.io/library/nginx:1.14-alpine
+
+?-docker run ubuntu
+?- docker run -dit ubuntu sleep 1000s
+6b62bd5c347f252fdc5c0a071df0505708e3638ae72885340a7a222463b81d05
+?-[root@demo Ahmed_Hany]# docker run -it ubuntu
+root@e783298b4f22:/# touch test-file
+9- docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                         PORTS     NAMES
+293c308a4810   nginx:alpine   "/docker-entrypoint.…"   About a minute ago   Exited (0) 54 seconds ago                web
+
+10-[root@demo Ahmed_Hany]# sudo docker rmi -f $(docker ps -a -q)
+Error: No such image: 293c308a4810
+Error: No such image: 15919a3ec903
+Error: No such image: 009044056d80
+Error: No such image: aea85c192e50
+Error: No such image: e783298b4f22
+Error: No such image: 47112cbf95a8
+Error: No such image: 6b62bd5c347f
+Error: No such image: 7d9ca6b4ba9d
+Error: No such image: 79d6443dbf6f
+Error: No such image: 29b12160dff1
+Error: No such image: cb49b520584b
+Error: No such image: c7ddf04be7fc
+Error: No such image: c3b9ed22dfdd
+Error: No such image: 0d32a94df4e9
+Error: No such image: c529da64ee53
+Error: No such image: 9ab02f3099ad
+Error: No such image: d038f6cae7df
+Error: No such image: 3edf24521a79
+Error: No such image: a459b93500d0
+[root@demo Ahmed_Hany]# docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                    PORTS     NAMES
+293c308a4810   nginx:alpine   "/docker-entrypoint.…"   12 hours ago   Exited (0) 12 hours ago             web
+15919a3ec903   nginx:alpine   "/docker-entrypoint.…"   12 hours ago   Exited (2) 12 hours ago             modest_aryabhata
+009044056d80   nginx:alpine   "/docker-entrypoint.…"   12 hours ago   Exited (2) 12 hours ago             loving_einstein
+aea85c192e50   nginx:alpine   "/docker-entrypoint.…"   12 hours ago   Exited (2) 12 hours ago             cool_cerf
+e783298b4f22   ubuntu         "bash"                   12 hours ago   Exited (0) 12 hours ago             practical_tharp
+47112cbf95a8   ubuntu         "--help"                 12 hours ago   Created                             competent_bassi
+6b62bd5c347f   ubuntu         "sleep 1000s"            12 hours ago   Exited (0) 12 hours ago             elastic_shannon
+7d9ca6b4ba9d   ubuntu         "sleep 20s"              12 hours ago   Exited (0) 12 hours ago             vigilant_elgamal
+79d6443dbf6f   ubuntu         "sleep 10s"              12 hours ago   Exited (0) 12 hours ago             youthful_cohen
+29b12160dff1   ubuntu         "sleep 1000s"            13 hours ago   Exited (0) 12 hours ago             sharp_nobel
+cb49b520584b   ubuntu         "-d sleep 1000s"         13 hours ago   Created                             xenodochial_cray
+c7ddf04be7fc   ubuntu         "bash"                   13 hours ago   Exited (0) 13 hours ago             upbeat_taussig
+c3b9ed22dfdd   nginx:alpine   "/docker-entrypoint.…"   13 hours ago   Up 13 hours               80/tcp    optimistic_bouman
+0d32a94df4e9   nginx:alpine   "/docker-entrypoint.…"   13 hours ago   Exited (0) 13 hours ago             elegant_chatelet
+c529da64ee53   nginx:alpine   "/docker-entrypoint.…"   13 hours ago   Exited (0) 13 hours ago             boring_hamilton
+9ab02f3099ad   3e12e2ceb68f   "docker-entrypoint.s…"   14 hours ago   Exited (0) 14 hours ago             vigorous_lumiere
+d038f6cae7df   3e12e2ceb68f   "docker-entrypoint.s…"   14 hours ago   Exited (0) 13 hours ago             naughty_bouman
+3edf24521a79   hello-world    "/hello"                 14 hours ago   Exited (0) 14 hours ago             trusting_booth
+a459b93500d0   hello-world    "/hello"                 6 days ago     Exited (0) 6 days ago               affectionate_archimedes
+[root@demo Ahmed_Hany]# docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+293c308a481048b0e1eb7041913a7fe5fc75bdbcc6d0d7f2fd4e2ec54ac597f1
+15919a3ec903d649947d378d8eddf8ae4e2a5a3aadac16d083476aa23cb55ce8
+009044056d806e4a4f830b651af6abbb9c26042ade6504602ba43730575ed9b2
+aea85c192e50acf3fe61c7e8f6f4f05c52326ba46958f2d58d3e46daa5337904
+e783298b4f2233e66dac2630af0d5ae2028e4962af7a241c14d9c89b2dcd09e3
+47112cbf95a8e8a8a799f6167eb7ed0ece3006acff095ea5ec95b4293ac424bc
+6b62bd5c347f252fdc5c0a071df0505708e3638ae72885340a7a222463b81d05
+7d9ca6b4ba9dcc87af28ee893feeb52f2f1a44fd4998437521047ff10c5ace4e
+79d6443dbf6f16e922f74124e935a6a9f5647860e4b60bf6dba1aa19fa0a0dd2
+29b12160dff13ce585bb7c2da1cd1ced66670056e7c0aa82e64399886e9645e0
+cb49b520584b9bc9ae9aebb877268a991bf26f56054283c561525e032195049a
+c7ddf04be7fcc82921c0aae78a7d83725102048e69939c55515f459a602d4a17
+0d32a94df4e9970acfcef84e1db392172ca1667d3f003affeff013db383f157c
+c529da64ee534d273f3988e80b1ee1eed5a61e3491caf766f630b15958c67812
+9ab02f3099adeaac7943ef2b88bd0426b13f4361557e61f4d3d4a1588f2f14e7
+d038f6cae7df13ad420b298ae800ad2c6412c5b6eb9c923041f0aec50a18bc69
+3edf24521a793aba6e6b1be98ace8a2913af811db5636de712c0b7d5ccae2bdc
+a459b93500d04dbbe247fab78206fa2842f45cda5d8c5157836ae82ed0191661
+
+Deleted Images:
+untagged: ubuntu:latest
+untagged: ubuntu@sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+deleted: sha256:6b7dfa7e8fdbe18ad425dd965a1049d984f31cf0ad57fa6d5377cca355e65f03
+deleted: sha256:6515074984c6f8bb1b8a9962c8fb5f310fc85e70b04c88442a3939c026dbfad3
+untagged: hello-world:latest
+untagged: hello-world@sha256:faa03e786c97f07ef34423fccceeec2398ec8a5759259f94d99078f264e9d7af
+deleted: sha256:feb5d9fea6a5e9606aa995e879d862b825965ba48de054caab5ef356dc6b3412
+deleted: sha256:e07ee1baac5fae6a26f30cabfe54a36d3402f96afda318fe0a96cec4ca393359
+untagged: nginx:1.14-alpine
+untagged: nginx@sha256:485b610fefec7ff6c463ced9623314a04ed67e3945b9c08d7e53a47f6d108dc7
+deleted: sha256:8a2fb25a19f5dc1528b7a3fabe8b3145ff57fe10e4f1edac6c718a3cf4aa4b73
+deleted: sha256:f68a8bcb9dbd06e0d2750eabf63c45f51734a72831ed650d2349775865d5fc20
+deleted: sha256:cbf2c7789332fe231e8defa490527a7b2c3ae8589997ceee00895f3263f0a8cf
+deleted: sha256:894f3fad7e6ecd7f24e88340a44b7b73663a85c0eb7740e7ade169e9d8491a4c
+deleted: sha256:a464c54f93a9e88fc1d33df1e0e39cca427d60145a360962e8f19a1dbf900da9
+
+Total reclaimed space: 93.85MB
+
+11- [root@demo Ahmed_Hany]# docker run --name nginx -p 38282:8080 nginx:alpine
+[root@demo Ahmed_Hany]# docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                     PORTS     NAMES
+a93a8745b767   nginx:alpine   "/docker-entrypoint.…"   About a minute ago   Exited (0) 6 seconds ago             nginx
+
+12-[root@demo Ahmed_Hany]# docker run ubuntu
+[root@demo Ahmed_Hany]# docker images -a
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+ubuntu       latest    6b7dfa7e8fdb   38 hours ago   77.8MB
+nginx        alpine    19dd4d73108a   4 weeks ago    23.5MB
+
+13-[root@demo Ahmed_Hany]# docker run -e APP_COLOR=blue-app -p 38282:8080 kodekloud/simple-webapp
+Unable to find image 'kodekloud/simple-webapp:latest' locally
+latest: Pulling from kodekloud/simple-webapp
+4fe2ade4980c: Pull complete 
+7cf6a1d62200: Pull complete 
+f0d690b9e495: Pull complete 
+fac5d45ad062: Pull complete 
+dd9b067ef6fd: Pull complete 
+7454877e71d0: Pull complete 
+e337be014a61: Pull complete 
+Digest: sha256:e5355b4c7804f453d79de75d6659ee702eeebbe30c02d9f1ce6602a96b576e57
+Status: Downloaded newer image for kodekloud/simple-webapp:latest
+ This is a sample web application that displays a colored background. 
+ A color can be specified in two ways. 
+
+ 1. As a command line argument with --color as the argument. Accepts one of red,green,blue,blue2,pink,darkblue 
+ 2. As an Environment variable APP_COLOR. Accepts one of red,green,blue,blue2,pink,darkblue 
+ 3. If none of the above then a random color is picked from the above list. 
+ Note: Command line argument precedes over environment variable.
+
+
+No Command line argument. Color from environment variable =blue-app
+Color not supported. Received 'blue-app' expected one of red,green,blue,blue2,pink,darkblue
+
+14- [root@demo Ahmed_Hany]# docker run -d -e MYSQL_ROOT_PASSWORD=db_pass123 --name mysql-db mysql
+Unable to find image 'mysql:latest' locally
+latest: Pulling from library/mysql
+0ed027b72ddc: Pull complete 
+0296159747f1: Pull complete 
+3d2f9b664bd3: Pull complete 
+df6519f81c26: Pull complete 
+36bb5e56d458: Pull complete 
+054e8fde88d0: Pull complete 
+f2b494c50c7f: Pull complete 
+132bc0d471b8: Pull complete 
+135ec7033a05: Pull complete 
+5961f0272472: Pull complete 
+75b5f7a3d3a4: Pull complete 
+Digest: sha256:3d7ae561cf6095f6aca8eb7830e1d14734227b1fb4748092f2be2cfbccf7d614
+Status: Downloaded newer image for mysql:latest
+a06078cf5f292664f277b4b5613843d25138039c5207edda86e92048b66b04ab
+
+16- [root@demo Ahmed_Hany]# docker run -v mysql_data:/opt/data/var/lib/mysql -d --name mysql-db2 -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
+8a25eb7f65f9fe13befef95ea961926d70987ddc3d1a6d563c19fd0907f45612
+
+
+
+
